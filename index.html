@@ -2,22 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First AWS Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marky's Page</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      background-color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('mark-bg.png') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: brightness(0.75);
+      animation: fadeIn 2s ease-in;
     }
+
     h1 {
-      color: #2c3e50;
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease forwards;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgba(0,0,0,0.6);
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      transition: all 0.4s ease;
+      text-align: center;
+      width: 220px;
+    }
+
+    a:hover {
+      background-color: #00adb5;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00adb5;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>Hello, AWS World!</h1>
-  <p>This static site is hosted on Amazon S3 🚀</p>
+  <h1>Hi, I'm Marky!</h1>
+  <div class="buttons">
+    <a href="https://facebook.com/rizz.coconuzz" target="_blank">Facebook</a>
+    <a href="https://instagram.com/rizz.coconuzz" target="_blank">Instagram</a>
+    <a href="https://t.me/Shinirioooooo" target="_blank">Telegram</a>
+    <a href="https://github.com/Markyy0411" target="_blank">GitHub</a>
+  </div>
 </body>
 </html>
